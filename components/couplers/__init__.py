@@ -49,7 +49,8 @@ from YanglabPDK.components.couplers.coupler90bend import (
 
 
 __all__ = [
-    "coupler_adiabatic",
+    "coupler_adiabatic_full",
+    "coupler_adiabatic_50",
     "coupler_asymmetric",
     "coupler_bent",
     "coupler_halfring",

@@ -244,6 +244,8 @@ def sagnet_feedback_with_curve(# Loop parameters
     straight_right.connect("o1", feedback_comp.ports["o2"])
     taper_coupler.connect("o1", straight_right.ports["o2"])
     straight_right_right.connect("o1", taper_coupler.ports["o2"])
+    c.add_port(name="o1", port=straight_left.ports["o2"])
+    c.add_port(name="o2", port=straight_right_right.ports["o2"])
     return Utils.pos_neg_seperate(c)
 
 @gf.cell
@@ -343,6 +345,8 @@ def sagnet_feedback_with_curve_micro_heater(# Loop parameters
     straight_right_heater_right.connect("o1", straight_right_heater.ports["o2"])
     taper_coupler.connect("o1", straight_right_heater_right.ports["o2"])
     straight_right_right.connect("o1", taper_coupler.ports["o2"])
+    c.add_port(name="o1", port=straight_left.ports["o2"])
+    c.add_port(name="o2", port=straight_right_right.ports["o2"])
     c.add_port(name="e_left", port=straight_right_heater.ports["l_e4"])
     c.add_port(name="e_right", port=straight_right_heater.ports["r_e4"])
     return Utils.pos_neg_seperate(c)

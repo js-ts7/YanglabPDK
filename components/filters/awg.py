@@ -10,7 +10,6 @@ Description  :
 
 Copyright (c) 2026 by Prof. Lan Yang Lab, All Rights Reserved. 
 '''
-from YanglabPDK import *
 import gdsfactory as gf
 from YanglabPDK.YanglabUtils import remap_layers, pos_neg_seperate, round_unit
 from YanglabPDK.components.waveguides.straight import straight  

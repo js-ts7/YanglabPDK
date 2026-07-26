@@ -2,22 +2,18 @@ import gdsfactory as gf
 
 from YanglabPDK import YanglabUtils as Utils
 from YanglabPDK import YanglabSections as Sections
-from YanglabPDK.components.couplers.coupler import coupler
-from YanglabPDK.components.filters.dbr import dbr
+from YanglabPDK.components.couplers.coupler import coupler as coupler_component
+from YanglabPDK.components.filters.dbr import dbr as dbr_component
 
 @gf.cell
-def cavity_fp(dbr=dbr(w1=1, w2=0.5, n=20), coupler=coupler(dy=8, dx=20)):
-    """Return a Fabry-Perot cavity assembled from DBR and coupler cells.
+def cavity_fp(dbr=None, coupler=None):
+    """Return a Fabry-Perot cavity assembled from DBR and coupler cells."""
+    if dbr is None:
+        dbr = dbr_component(w1=1, w2=0.5, n=20)
+    if coupler is None:
+        coupler = coupler_component(dy=8, dx=20)
 
-    Args:
-        dbr: DBR mirror component used in the cavity.
-        coupler: Coupler component connected to the cavity.
-
-    Returns:
-        Component containing the assembled Fabry-Perot cavity.
-    """
     c = gf.Component()
-    c.component = dbr
     cr = c << coupler
     ml = c << dbr
     mr = c << dbr

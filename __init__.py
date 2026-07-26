@@ -9,20 +9,17 @@ keeps the most frequently used modules available as:
 - `YanglabPDK.Sections`
 """
 
-import gdsfactory as gf
 from YanglabPDK import YanglabLayerStack as LayerStack
 
 LAYER = LayerStack.YanglabLayerMap
+__version__ = "0.1.0"
 
 from YanglabPDK import YanglabUtils as Utils
 from YanglabPDK import YanglabSections as Sections
-
-gf.config.rich_output()
-# gf.CONF.logfilter.level = "CRITICAL"
-
 
 __all__ = [
     "LAYER",
     "Utils",
     "Sections",
+    "__version__",
 ]
