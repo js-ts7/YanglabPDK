@@ -1,0 +1,4846 @@
+{
+  "schemaVersion": 1,
+  "package": "YanglabPDK",
+  "componentCount": 58,
+  "registeredCount": 24,
+  "components": [
+    {
+      "id": "components.bends.bend_bezier:bend_bezier",
+      "name": "bend_bezier",
+      "title": "Bezier bend",
+      "category": "bends",
+      "module": "YanglabPDK.components.bends.bend_bezier",
+      "relativeModule": "components.bends.bend_bezier",
+      "file": "components/bends/bend_bezier.py",
+      "line": 9,
+      "description": "Bezier-profile waveguide bend.",
+      "docstring": "Returns Bezier bend.\n\nArgs:\n    control_points: list of points.\n    npoints: number of points varying between 0 and 1.\n    with_manhattan_facing_angles: bool.\n    start_angle: optional start angle in deg.\n    end_angle: optional end angle in deg.\n    width: width to use. Defaults to cross_section.width.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              5.0,
+              0.0
+            ],
+            [
+              50,
+              5
+            ],
+            [
+              100.0,
+              20
+            ]
+          ],
+          "source": "[[0.0, 0.0], [5.0, 0.0], [50, 5], [100.0, 20]]",
+          "name": "control_points",
+          "annotation": "Coordinates",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 201,
+          "source": "201",
+          "name": "npoints",
+          "annotation": "int",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": true,
+          "source": "True",
+          "name": "with_manhattan_facing_angles",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": null,
+          "source": "None",
+          "name": "start_angle",
+          "annotation": "int | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": null,
+          "source": "None",
+          "name": "end_angle",
+          "annotation": "int | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "control_points",
+        "npoints",
+        "with_manhattan_facing_angles",
+        "start_angle"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/bend_bezier-b730c9b0.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.bends.bend_circular:bend_circular",
+      "name": "bend_circular",
+      "title": "Circular bend",
+      "category": "bends",
+      "module": "YanglabPDK.components.bends.bend_circular",
+      "relativeModule": "components.bends.bend_circular",
+      "file": "components/bends/bend_circular.py",
+      "line": 7,
+      "description": "Constant-radius circular bend.",
+      "docstring": "Returns a radial arc.\n\nArgs:\n    radius: in um. Defaults to cross_section_radius.\n    angle: angle of arc (degrees).\n    width: width to use. Defaults to cross_section.width.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 90,
+          "source": "90",
+          "name": "angle",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle",
+        "width",
+        "buffer"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/bend_circular-ef63a549.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.bends.bend_euler:bend_euler",
+      "name": "bend_euler",
+      "title": "Euler bend",
+      "category": "bends",
+      "module": "YanglabPDK.components.bends.bend_euler",
+      "relativeModule": "components.bends.bend_euler",
+      "file": "components/bends/bend_euler.py",
+      "line": 7,
+      "description": "Low-loss Euler bend.",
+      "docstring": "Regular degree euler bend.\n\nArgs:\n    radius: in um. Defaults to cross_section_radius.\n    angle: total angle of the curve.\n    p: Proportion of the curve that is an Euler curve.\n    width: width to use. Defaults to cross_section.width.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 90,
+          "source": "90",
+          "name": "angle",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "p",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle",
+        "width",
+        "buffer"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/bend_euler-1d1fbf8f.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.bends.bend_s:bend_s",
+      "name": "bend_s",
+      "title": "S bend",
+      "category": "bends",
+      "module": "YanglabPDK.components.bends.bend_s",
+      "relativeModule": "components.bends.bend_s",
+      "file": "components/bends/bend_s.py",
+      "line": 9,
+      "description": "S-shaped waveguide transition.",
+      "docstring": "Return S bend with bezier curve.\n\nstores min_bend_radius property in self.info['min_bend_radius']\nmin_bend_radius depends on height and length\n\nArgs:\n    size: in x and y direction.\n    width: width to use. Defaults to cross_section.width.\n    buffer: buffer width for positive tone resist (um)\n\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": [
+            10,
+            10
+          ],
+          "source": "[10, 10]",
+          "name": "size",
+          "annotation": "Size",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "size",
+        "width",
+        "buffer"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/bend_s-77d18e26.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_single:ring_single",
+      "name": "ring_single",
+      "title": "Single ring resonator",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_single",
+      "relativeModule": "components.cavities.cavity_wgm.ring_single",
+      "file": "components/cavities/cavity_wgm/ring_single.py",
+      "line": 13,
+      "description": "Single-bus whispering-gallery ring resonator.",
+      "docstring": "Returns a single ring.\n\nring coupler (cb: bottom) connects to two vertical straights (sl: left, sr: right),\ntwo bends (bl, br) and horizontal straight (wg: top)\n\nArgs:\n    gap: gap between for coupler.\n    radius: for the bend and coupler.\n    length_x: ring coupler length.\n    length_y: vertical straight length.\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n                xxxxxxxxxxxxx\n            xxxxx           xxxx\n          xxx                   xxx\n        xxx                       xxx\n       xx                           xxx\n       x                             xxx\n      xx                              xx▲\n      xx                              xx│length_y\n      xx                              xx▼\n      xx                             xx\n       xx          length_x          x\n        xx     ◄───────────────►    x\n         xx                       xxx\n           xx                   xxx\n            xxx──────▲─────────xxx\n                     │gap\n             o1──────▼─────────o2",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 4.0,
+          "source": "4.0",
+          "name": "length_x",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "length_y",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_bend",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 500,
+          "source": "500",
+          "name": "length_extension_left",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 500,
+          "source": "500",
+          "name": "length_extension_right",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "gap",
+        "width",
+        "wg_width",
+        "buffer"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_single-16df4f3b.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_pulley:ring_single_pulley",
+      "name": "ring_single_pulley",
+      "title": "Pulley ring resonator",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_pulley",
+      "relativeModule": "components.cavities.cavity_wgm.ring_pulley",
+      "file": "components/cavities/cavity_wgm/ring_pulley.py",
+      "line": 12,
+      "description": "Ring resonator with an extended pulley bus coupler.",
+      "docstring": "Returns ring with curved coupler.\n\nTODO: enable euler bends.\n\nArgs:\n    radius: um.\n    gap: um.\n    angle_inner: of the inner bend, from beginning to end. Depending on the bend chosen, gap may not be preserved.\n    angle_outer: of the outer bend, from beginning to end. Depending on the bend chosen, gap may not be preserved.\n    bend: for bend.\n    length_x: horizontal straight length.\n    length_y: vertical straight length.\n    cross_section: cross_section.\n    cross_section_inner: spec inner bend.\n    cross_section_outer: spec outer bend.\n    kwargs: cross_section settings.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 90,
+          "source": "90",
+          "name": "coupling_angle_coverage",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "length_x",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "length_y",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_inner",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_outer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 500,
+          "source": "500",
+          "name": "length_extension_left",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 500,
+          "source": "500",
+          "name": "length_extension_right",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "gap",
+        "coupling_angle_coverage",
+        "length_x"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_single_pulley-7fc1c8d4.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler:coupler",
+      "name": "coupler",
+      "title": "Directional coupler",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler",
+      "relativeModule": "components.couplers.coupler",
+      "file": "components/couplers/coupler.py",
+      "line": 37,
+      "description": "Symmetric directional coupler.",
+      "docstring": "Symmetric coupler.\n\nArgs:\n    gap: between straights in um.\n    length: of coupling region in um.\n    dy: port to port vertical spacing in um.\n    dx: length of bend in x direction in um.\n    cross_section: spec (CrossSection, string or dict).\n    allow_min_radius_violation: if True does not check for min bend radius.\n    bend: input and output sbend components.\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n           dx                                 dx\n        |------|                           |------|\n     o2 ________                           ______o3\n                \\                         /           |\n                 \\        length         /            |\n                  ======================= gap         | dy\n                 /                       \\            |\n        ________/                         \\_______    |\n     o1                                          o4\n\n                    coupler_straight  coupler_symmetric",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 0.236,
+          "source": "0.236",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20.0,
+          "source": "20.0",
+          "name": "length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 4.0,
+          "source": "4.0",
+          "name": "dy",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "dx",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "gap",
+        "length",
+        "dy",
+        "dx"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler-d9612e5c.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler_adiabatic:coupler_adiabatic_full",
+      "name": "coupler_adiabatic_full",
+      "title": "Adiabatic coupler",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler_adiabatic",
+      "relativeModule": "components.couplers.coupler_adiabatic",
+      "file": "components/couplers/coupler_adiabatic.py",
+      "line": 9,
+      "description": "Full adiabatic directional coupler.",
+      "docstring": "Adiabatic Full coupler.\n\nDesign based on asymmetric adiabatic full\ncoupler designs, such as the one reported in 'Integrated Optic Adiabatic\nDevices on Silicon' by Y. Shani, et al (IEEE Journal of Quantum\nElectronics, Vol. 27, No. 3 March 1991).\n\n1. is the first half of the input S-bend straight where the\ninput straights widths taper by +dw and -dw,\n2. is the second half of the S-bend straight with constant,\nunbalanced widths,\n3. is the coupling region where the straights from unbalanced widths to\nbalanced widths to reverse polarity unbalanced widths,\n4. is the fixed width straight that curves away from the coupling region,\n5.is the final curve where the straights taper back to the regular width\nspecified in the straight template.\n\nArgs:\n    coupling_length: Length of the coupling region in um.\n    dx: Length of the bend regions in um.\n    dy: Port-to-port distance between the bend regions in um.\n    gap: Distance between the two straights in um.\n    dw: delta width. Top arm tapers to width - dw, bottom to width + dw in um.\n    width: width of the waveguide. If None, it will use the width of the cross_section.\n    buffer: buffer.\n\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 40.0,
+          "source": "40.0",
+          "name": "coupling_length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "dx",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 4.8,
+          "source": "4.8",
+          "name": "dy",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "dw",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "coupling_length",
+        "dx",
+        "dy",
+        "gap"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler_adiabatic_full-75294aab.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler_ring:coupler_halfring",
+      "name": "coupler_halfring",
+      "title": "Half-ring coupler",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler_ring",
+      "relativeModule": "components.couplers.coupler_ring",
+      "file": "components/couplers/coupler_ring.py",
+      "line": 15,
+      "description": "Bus-to-half-ring coupling section.",
+      "docstring": "Coupler for ring.\n\nArgs:\n    gap: spacing between parallel coupled straight waveguides.\n    radius: of the bends.\n    length_x: length of the parallel coupled straight waveguides.\n    width_wg: width of the waveguides.\n    width_bend: width of the bends.\n    buffer: buffer width for positive tone resist (um)\n    length_extension_left: left to extension comparing to center of the ring.\n    length_extension_right: right to extension comparing to center of the ring.\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n      o2            o3\n       |             |\n        \\           /\n         \\         /\n       ---=========---\n    o1    length_x   o4",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5.0,
+          "source": "5.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0,
+          "source": "0",
+          "name": "length_x",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_bend",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20,
+          "source": "20",
+          "name": "length_extension_left",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20,
+          "source": "20",
+          "name": "length_extension_right",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "gap",
+        "radius",
+        "length_x",
+        "width_wg"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler_halfring-e610ff3a.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler_ring:coupler_halfring_pulley",
+      "name": "coupler_halfring_pulley",
+      "title": "Pulley half-ring coupler",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler_ring",
+      "relativeModule": "components.couplers.coupler_ring",
+      "file": "components/couplers/coupler_ring.py",
+      "line": 101,
+      "description": "Extended pulley coupling section for a ring resonator.",
+      "docstring": "Coupler for ring.\n\nArgs:\n    gap: spacing between parallel coupled straight waveguides.\n    radius: of the bends.\n    length_x: length of the parallel coupled straight waveguides.\n    width_wg: width of the waveguides.\n    width_bend: width of the bends.\n    buffer: buffer width for positive tone resist (um)\n    length_extension_left: left to extension comparing to center of the ring.\n    length_extension_right: right to extension comparing to center of the ring.\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n      o2            o3\n       |             |\n        \\           /\n         \\         /\n       ---=========---\n    o1    length_x   o4",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5.0,
+          "source": "5.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0,
+          "source": "0",
+          "name": "length_x",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_bend",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 45,
+          "source": "45",
+          "name": "covered_angle",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20,
+          "source": "20",
+          "name": "length_extension_left",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20,
+          "source": "20",
+          "name": "length_extension_right",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "gap",
+        "radius",
+        "length_x",
+        "width_wg"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler_halfring_pulley-56db62a1.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler:coupler_straight",
+      "name": "coupler_straight",
+      "title": "Straight coupling section",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler",
+      "relativeModule": "components.couplers.coupler",
+      "file": "components/couplers/coupler.py",
+      "line": 8,
+      "description": "Parallel straight coupling region.",
+      "docstring": "Coupler_straight with two parallel straights.\n\nArgs:\n    length: of straight.\n    gap: between straights.\n    width: of the straights.\n    buffer: buffer.\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n    o2──────▲─────────o3\n            │gap\n    o1──────▼─────────o4",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.27,
+          "source": "0.27",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "length",
+        "gap",
+        "width",
+        "buffer"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler_straight-dd1029e2.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.filters.awg:awg",
+      "name": "awg",
+      "title": "Arrayed waveguide grating",
+      "category": "filters",
+      "module": "YanglabPDK.components.filters.awg",
+      "relativeModule": "components.filters.awg",
+      "file": "components/filters/awg.py",
+      "line": 68,
+      "description": "Arrayed waveguide grating layout.",
+      "docstring": "Return an arrayed waveguide grating layout.\n\nArgs:\n    None.\n\nReturns:\n    Component containing input waveguide, Rowland regions, waveguide array,\n    and output routing.",
+      "parameters": [],
+      "recommended": [],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/awg-c9bcc0f6.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.filters.dbr:dbr",
+      "name": "dbr",
+      "title": "Distributed Bragg reflector",
+      "category": "filters",
+      "module": "YanglabPDK.components.filters.dbr",
+      "relativeModule": "components.filters.dbr",
+      "file": "components/filters/dbr.py",
+      "line": 70,
+      "description": "Periodic-width DBR filter.",
+      "docstring": "Distributed Bragg Reflector.\n\nArgs:\n    w1: thin width in um.\n    w2: thick width in um.\n    l1: thin length in um.\n    l2: thick length in um.\n    n: number of periods.\n    width: waveguide width in um.\n    length: length of straight.\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n       l1      l2\n    <-----><-------->\n            _________\n    _______|\n\n      w1       w2       ...  n times\n    _______\n           |_________",
+      "parameters": [
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "w1",
+          "name": "w1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "w2",
+          "name": "w2",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "period / 2",
+          "name": "l1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "period / 2",
+          "name": "l2",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10,
+          "source": "10",
+          "name": "n",
+          "annotation": "int",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "n"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/dbr-8257ba4e.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.lasers.sagnet_feedback:sagnet_feedback",
+      "name": "sagnet_feedback",
+      "title": "Sagnac feedback circuit",
+      "category": "lasers",
+      "module": "YanglabPDK.components.lasers.sagnet_feedback",
+      "relativeModule": "components.lasers.sagnet_feedback",
+      "file": "components/lasers/sagnet_feedback.py",
+      "line": 27,
+      "description": "Photonic feedback circuit using a Sagnac loop.",
+      "docstring": "Return a Sagnac-feedback cavity connected to an asymmetric add-drop ring.\n\nArgs:\n    radius_loop: Sagnac loop bend radius in microns.\n    length_loop: Sagnac loop routing length in microns.\n    width: Main waveguide width in microns.\n    wg_width: Add-drop bus waveguide width in microns.\n    short_width: Narrow ring width in microns.\n    long_width: Wide ring width in microns.\n    width_taper: MMI taper width in microns.\n    length_taper: MMI taper length in microns.\n    length_mmi: MMI body length in microns.\n    width_mmi: MMI body width in microns.\n    gap_mmi: MMI output gap in microns.\n    radius: Ring radius in microns.\n    gap: Ring coupling gap in microns.\n    racetrack_len: Ring straight section length in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with optical ports `o1` and `o2`.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 75,
+          "source": "75",
+          "name": "radius_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 250,
+          "source": "250",
+          "name": "length_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "wg_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "short_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.424,
+          "source": "2.424",
+          "name": "width_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "length_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.424,
+          "source": "30.424",
+          "name": "length_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 6.024,
+          "source": "6.024",
+          "name": "width_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.675,
+          "source": "0.675",
+          "name": "gap_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 99,
+          "source": "99",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.45,
+          "source": "0.45",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 190,
+          "source": "190",
+          "name": "racetrack_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius_loop",
+        "length_loop",
+        "width",
+        "wg_width"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/sagnet_feedback-8d275178.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.mmis.mmi1x2:mmi1x2",
+      "name": "mmi1x2",
+      "title": "MMI 1x2",
+      "category": "mmis",
+      "module": "YanglabPDK.components.mmis.mmi1x2",
+      "relativeModule": "components.mmis.mmi1x2",
+      "file": "components/mmis/mmi1x2.py",
+      "line": 10,
+      "description": "One-input, two-output multimode interferometer.",
+      "docstring": "1x2 MultiMode Interferometer (MMI).\n\nArgs:\n    width: input and output straight width. Defaults to cross_section width.\n    width_taper: interface between input straights and mmi region.\n    length_taper: into the mmi region.\n    length_mmi: in x direction.\n    width_mmi: in y direction.\n    gap_mmi:  gap between tapered wg.\n    buffer: Buffer width for positive tone resist\n\nReturns:\n    Component with the generated layout.\n\n\n.. code::\n\n           length_mmi\n            <------>\n            ________\n           |        |\n           |         \\__\n           |          __  o2\n        __/          /_ _ _ _\n     o1 __          | _ _ _ _| gap_mmi\n          \\          \\__\n           |          __  o3\n           |         /\n           |________|\n\n         <->\n    length_taper",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.0,
+          "source": "1.0",
+          "name": "width_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "length_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5.5,
+          "source": "5.5",
+          "name": "length_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.5,
+          "source": "2.5",
+          "name": "width_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.25,
+          "source": "0.25",
+          "name": "gap_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "width",
+        "width_taper",
+        "length_taper",
+        "length_mmi"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/mmi1x2-6a572178.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.mmis.mmi2x2:mmi2x2",
+      "name": "mmi2x2",
+      "title": "MMI 2x2",
+      "category": "mmis",
+      "module": "YanglabPDK.components.mmis.mmi2x2",
+      "relativeModule": "components.mmis.mmi2x2",
+      "file": "components/mmis/mmi2x2.py",
+      "line": 21,
+      "description": "Two-input, two-output multimode interferometer.",
+      "docstring": "Mmi 2x2.\n\nArgs:\n    width: input and output straight width.\n    width_taper: interface between input straights and mmi region.\n    length_taper: into the mmi region.\n    length_mmi: in x direction.\n    width_mmi: in y direction.\n    gap_mmi: (width_taper + gap between tapered wg)/2.\n    buffer: buffer around the component.\n\nReturns:\n    Component with the generated layout.\n\n\n.. code::\n\n               length_mmi\n                <------>\n                ________\n               |        |\n            __/          \\__\n        o2  __            __  o3\n              \\          /_ _ _ _\n              |         | _ _ _ _| gap_mmi\n            __/          \\__\n        o1  __            __  o4\n              \\          /\n               |________|\n\n             <->\n        length_taper",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "width_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20,
+          "source": "20",
+          "name": "length_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 125,
+          "source": "125",
+          "name": "length_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 15,
+          "source": "15",
+          "name": "width_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 4,
+          "source": "4",
+          "name": "gap_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "width",
+        "width_taper",
+        "length_taper",
+        "length_mmi"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/mmi2x2-da131611.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.mzis.mzi_mmi:mzi_mmi",
+      "name": "mzi_mmi",
+      "title": "MMI Mach-Zehnder interferometer",
+      "category": "mzis",
+      "module": "YanglabPDK.components.mzis.mzi_mmi",
+      "relativeModule": "components.mzis.mzi_mmi",
+      "file": "components/mzis/mzi_mmi.py",
+      "line": 12,
+      "description": "Mach-Zehnder interferometer assembled from MMI splitters.",
+      "docstring": "Return an MZI built from two 1x2 MMI couplers.\n\nArgs:\n    width: Waveguide width in microns.\n    width_taper: MMI taper width in microns.\n    length_taper: MMI taper length in microns.\n    length_mmi: MMI body length in microns.\n    width_mmi: MMI body width in microns.\n    gap_mmi: Gap between MMI output waveguides in microns.\n    bend_angle: S-bend angle in degrees.\n    straight_length: Length of the two interferometer arms in microns.\n    edge_length: Length of the input and output access waveguides in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with optical ports `o1` and `o2`.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.0,
+          "source": "1.0",
+          "name": "width_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "length_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5.5,
+          "source": "5.5",
+          "name": "length_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.5,
+          "source": "2.5",
+          "name": "width_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.25,
+          "source": "0.25",
+          "name": "gap_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "bend_angle",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "straight_length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 500,
+          "source": "500",
+          "name": "edge_length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "width",
+        "width_taper",
+        "length_taper",
+        "length_mmi"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/mzi_mmi-bf023c4a.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.reflectors.sagnac_loop:sagnac_loop",
+      "name": "sagnac_loop",
+      "title": "Sagnac loop",
+      "category": "reflectors",
+      "module": "YanglabPDK.components.reflectors.sagnac_loop",
+      "relativeModule": "components.reflectors.sagnac_loop",
+      "file": "components/reflectors/sagnac_loop.py",
+      "line": 24,
+      "description": "Loop mirror based on a directional coupler.",
+      "docstring": "Return a Sagnac loop reflector based on a 1x2 MMI.\n\nArgs:\n    radius_loop: Radius of the loop bend in microns.\n    length_loop: S-bend routing length in microns.\n    width: Waveguide width in microns.\n    width_taper: MMI taper width in microns.\n    length_taper: MMI taper length in microns.\n    length_mmi: MMI body length in microns.\n    width_mmi: MMI body width in microns.\n    gap_mmi: MMI output gap in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with one optical input port `o1`.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 75,
+          "source": "75",
+          "name": "radius_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 250,
+          "source": "250",
+          "name": "length_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.424,
+          "source": "2.424",
+          "name": "width_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "length_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.424,
+          "source": "30.424",
+          "name": "length_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 6.024,
+          "source": "6.024",
+          "name": "width_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.675,
+          "source": "0.675",
+          "name": "gap_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius_loop",
+        "length_loop",
+        "width",
+        "width_taper"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/sagnac_loop-451d84d9.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.spirals.spiral_double:spiral_double",
+      "name": "spiral_double",
+      "title": "Double spiral",
+      "category": "spirals",
+      "module": "YanglabPDK.components.spirals.spiral_double",
+      "relativeModule": "components.spirals.spiral_double",
+      "file": "components/spirals/spiral_double.py",
+      "line": 7,
+      "description": "Compact long-path double spiral waveguide.",
+      "docstring": "Returns a spiral double (spiral in, and then out).\n\nArgs:\n    min_bend_radius: inner radius of the spiral.\n    separation: separation between the loops.\n    number_of_loops: number of loops per spiral.\n    npoints: points for the spiral.\n    width: waveguide width in um.\n    buffer: buffer.\n\nReturns:\n    Component with the double spiral layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "min_bend_radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.0,
+          "source": "2.0",
+          "name": "separation",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "number_of_loops",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1000,
+          "source": "1000",
+          "name": "npoints",
+          "annotation": "int",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "min_bend_radius",
+        "separation",
+        "number_of_loops",
+        "npoints"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {
+        "min_bend_radius": 10.0
+      },
+      "thumbnail": "thumbnails/spiral_double-44642995.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.tapers.taper:taper",
+      "name": "taper",
+      "title": "Waveguide taper",
+      "category": "tapers",
+      "module": "YanglabPDK.components.tapers.taper",
+      "relativeModule": "components.tapers.taper",
+      "file": "components/tapers/taper.py",
+      "line": 22,
+      "description": "Linear waveguide-width transition.",
+      "docstring": "Linear taper, which tapers only the main cross section section.\n\nArgs:\n    length: taper length.\n    width1: width of the west/left port.\n    width2: width of the east/right port. Defaults to width1.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width2",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": false,
+          "source": "False",
+          "name": "is_buffer_aligned",
+          "annotation": "bool",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "length",
+        "width1",
+        "width2",
+        "buffer"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/taper-199feb1c.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.tapers.taper:taper_buffer",
+      "name": "taper_buffer",
+      "title": "Buffered taper",
+      "category": "tapers",
+      "module": "YanglabPDK.components.tapers.taper",
+      "relativeModule": "components.tapers.taper",
+      "file": "components/tapers/taper.py",
+      "line": 52,
+      "description": "Waveguide taper with process buffer geometry.",
+      "docstring": "Linear taper, which tapers only the main cross section section.\n\nArgs:\n    length: taper length.\n    width1: width of the west/left port.\n    width2: width of the east/right port. Defaults to width1.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width2",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer2",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": false,
+          "source": "False",
+          "name": "is_buffer_aligned",
+          "annotation": "bool",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "length",
+        "width1",
+        "width2",
+        "buffer1"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/taper_buffer-da79d674.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.utils.mark:cross",
+      "name": "cross",
+      "title": "Cross alignment mark",
+      "category": "utils",
+      "module": "YanglabPDK.components.utils.mark",
+      "relativeModule": "components.utils.mark",
+      "file": "components/utils/mark.py",
+      "line": 8,
+      "description": "Cross-shaped lithography alignment mark.",
+      "docstring": "Return a hollow cross alignment marker with a text label.\n\nArgs:\n    outter_length: Outer cross length in microns.\n    outter_width: Outer cross width in microns.\n    inner_width: Subtracted inner cross width in microns.\n    layer: Marker layer.\n    text: Text label placed next to the marker.\n\nReturns:\n    Component containing the marker geometry and label.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 200,
+          "source": "200",
+          "name": "outter_length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5,
+          "source": "5",
+          "name": "outter_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "inner_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "LAYER.MK",
+          "name": "layer",
+          "annotation": "Layer",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": "1",
+          "source": "'1'",
+          "name": "text",
+          "annotation": "str",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "outter_length",
+        "outter_width",
+        "inner_width",
+        "layer"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/cross-e2940319.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.waveguides.straight:straight",
+      "name": "straight",
+      "title": "Straight waveguide",
+      "category": "waveguides",
+      "module": "YanglabPDK.components.waveguides.straight",
+      "relativeModule": "components.waveguides.straight",
+      "file": "components/waveguides/straight.py",
+      "line": 7,
+      "description": "Straight optical waveguide with positive/negative resist geometry.",
+      "docstring": "Returns a Straight waveguide.\n\nArgs:\n    length: straight length (um).\n    width: width of the waveguide. \n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.\n.. code::\n    --------------------\n    o1 -------------- o2\n    --------------------\n            length",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 10,
+          "source": "10",
+          "name": "length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "length",
+        "width",
+        "buffer"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/straight-6e6c2860.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.waveguides.straight_heater_metal:straight_heater_metal_undercut",
+      "name": "straight_heater_metal_undercut",
+      "title": "Metal heater waveguide",
+      "category": "waveguides",
+      "module": "YanglabPDK.components.waveguides.straight_heater_metal",
+      "relativeModule": "components.waveguides.straight_heater_metal",
+      "file": "components/waveguides/straight_heater_metal.py",
+      "line": 9,
+      "description": "Straight waveguide with metal heater and undercut geometry.",
+      "docstring": "Returns a thermal phase shifter.\n\ndimensions from https://doi.org/10.1364/OE.27.010456\n\nArgs:\n    length: of the waveguide.\n    length_undercut_spacing: from undercut regions.\n    length_undercut: length of each undercut section.\n    length_straight_input: from input port to where trenches start.\n    with_undercut: isolation trenches for higher efficiency.\n    heater_taper_length: minimizes current concentrations from heater to via_stack.\n    heater_width: width of the heater.\n    undercut_width: width of the undercut.\n    undercut_gap: gap between the undercut and the waveguide.\n    width: width of the waveguide.\n    buffer: buffer width for positive tone resist.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 320.0,
+          "source": "320.0",
+          "name": "length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 6,
+          "source": "6",
+          "name": "length_undercut_spacing",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.0,
+          "source": "30.0",
+          "name": "length_undercut",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 15,
+          "source": "15",
+          "name": "length_straight_input",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": true,
+          "source": "True",
+          "name": "with_undercut",
+          "annotation": "bool",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5.0,
+          "source": "5.0",
+          "name": "heater_taper_length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "heater_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "undercut_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "undercut_gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "length",
+        "length_undercut_spacing",
+        "length_undercut",
+        "length_straight_input"
+      ],
+      "registered": true,
+      "status": "registered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/straight_heater_metal_undercut-6f65d90e.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.bends.bend_euler:bend_euler_s",
+      "name": "bend_euler_s",
+      "title": "Bend Euler S",
+      "category": "bends",
+      "module": "YanglabPDK.components.bends.bend_euler",
+      "relativeModule": "components.bends.bend_euler",
+      "file": "components/bends/bend_euler.py",
+      "line": 29,
+      "description": "Sbend made of 2 euler bends.",
+      "docstring": "Sbend made of 2 euler bends.\n\nArgs:\n    radius: in um. Defaults to cross_section_radius.\n    angle: total angle of the curve\n    p: Proportion of the curve that is an Euler curve.\n    width: width to use. Defaults to cross_section.width.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.\n\n\n.. code::\n\n                    _____ o2\n                   /\n                  /\n                 /\n                /\n                |\n               /\n              /\n             /\n     o1_____/",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "angle",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "p",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle",
+        "p",
+        "width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/bend_euler_s-b5f087d0.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_fp:cavity_fp",
+      "name": "cavity_fp",
+      "title": "Cavity Fp",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_fp",
+      "relativeModule": "components.cavities.cavity_fp",
+      "file": "components/cavities/cavity_fp.py",
+      "line": 9,
+      "description": "Return a Fabry-Perot cavity assembled from DBR and coupler cells.",
+      "docstring": "Return a Fabry-Perot cavity assembled from DBR and coupler cells.\n\nArgs:\n    dbr: DBR mirror component used in the cavity.\n    coupler: Coupler component connected to the cavity.\n\nReturns:\n    Component containing the assembled Fabry-Perot cavity.",
+      "parameters": [
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "dbr(w1=1, w2=0.5, n=20)",
+          "name": "dbr",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "coupler(dy=8, dx=20)",
+          "name": "coupler",
+          "annotation": null,
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "dbr",
+        "coupler"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/cavity_fp-10bfaad1.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_asymmetry:half_ring_asymmetry",
+      "name": "half_ring_asymmetry",
+      "title": "Half Ring Asymmetry",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_asymmetry",
+      "relativeModule": "components.cavities.cavity_wgm.ring_asymmetry",
+      "file": "components/cavities/cavity_wgm/ring_asymmetry.py",
+      "line": 12,
+      "description": "Return one half of an asymmetric-width ring.",
+      "docstring": "Return one half of an asymmetric-width ring.\n\nArgs:\n    radius: Centerline radius in microns.\n    short_width: Narrow side width in microns.\n    long_width: Wide side width in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with optical ports `o1` and `o2`.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "short_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": null,
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "short_width",
+        "long_width",
+        "buffer"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/half_ring_asymmetry-4a26c4e3.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_array_blocks:pulley_ring_with_wg_3_in_2",
+      "name": "pulley_ring_with_wg_3_in_2",
+      "title": "Pulley Ring With Wg 3 In 2",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_array_blocks",
+      "relativeModule": "components.cavities.cavity_wgm.ring_array_blocks",
+      "file": "components/cavities/cavity_wgm/ring_array_blocks.py",
+      "line": 215,
+      "description": "Return a pulley ring with waveguides aligned for a 3-in-2 field array.",
+      "docstring": "Return a pulley ring with waveguides aligned for a 3-in-2 field array.\n\nArgs:\n    radius: Ring radius in microns.\n    gap: Gap between ring and bus waveguide in microns.\n    width_wg: Bus waveguide width in microns.\n    width_ring: Ring waveguide width in microns.\n    angle: Pulley coupling angle in degrees.\n    offset: Horizontal offset from the field edge in microns.\n    total_length: Total component length in microns.\n\nReturns:\n    Component with the pulley ring and routed bus waveguide.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 80,
+          "source": "80",
+          "name": "radius",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "gap",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_ring",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20,
+          "source": "20",
+          "name": "angle",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0,
+          "source": "0",
+          "name": "offset",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 12000,
+          "source": "12000",
+          "name": "total_length",
+          "annotation": null,
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "gap",
+        "width_wg",
+        "width_ring"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/pulley_ring_with_wg_3_in_2-26f87747.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_asymmetry:ring_assymmetry_add_drop",
+      "name": "ring_assymmetry_add_drop",
+      "title": "Ring Assymmetry Add Drop",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_asymmetry",
+      "relativeModule": "components.cavities.cavity_wgm.ring_asymmetry",
+      "file": "components/cavities/cavity_wgm/ring_asymmetry.py",
+      "line": 187,
+      "description": "Return an asymmetric add-drop racetrack ring.",
+      "docstring": "Return an asymmetric add-drop racetrack ring.\n\nArgs:\n    radius: Bend radius in microns.\n    short_width: Narrow ring width in microns.\n    gap: Coupling gap in microns.\n    wg_width: Narrow bus waveguide width in microns.\n    width: Access waveguide width in microns.\n    long_width: Wide ring width in microns.\n    racetrack_len: Straight ring section length in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with four optical ports `o1`, `o2`, `o3`, and `o4`.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "short_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "gap",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "wg_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 200,
+          "source": "200",
+          "name": "racetrack_len",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": null,
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "short_width",
+        "gap",
+        "wg_width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_assymmetry_add_drop-9c4d4e0d.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_asymmetry:ring_assymmetry_add_drop_w_heater",
+      "name": "ring_assymmetry_add_drop_w_heater",
+      "title": "Ring Assymmetry Add Drop W Heater",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_asymmetry",
+      "relativeModule": "components.cavities.cavity_wgm.ring_asymmetry",
+      "file": "components/cavities/cavity_wgm/ring_asymmetry.py",
+      "line": 225,
+      "description": "Return an asymmetric add-drop ring with an integrated microheater.",
+      "docstring": "Return an asymmetric add-drop ring with an integrated microheater.\n\nArgs:\n    radius: Bend radius in microns.\n    short_width: Narrow ring width in microns.\n    gap: Coupling gap in microns.\n    wg_width: Narrow bus waveguide width in microns.\n    width: Access waveguide width in microns.\n    long_width: Wide ring width in microns.\n    buffer: Positive-resist buffer width in microns.\n    w: Heater width in microns.\n    theta0: Heater start angle in degrees.\n    theta1: Heater end angle in degrees.\n    lead_len: Straight heater lead length in microns.\n    elef_taper_len: Electrical taper length in microns.\n    pad_size: Electrical pad size `(x, y)` in microns.\n    add_teeth: Whether to add meander teeth along the heater.\n    tooth_len: Tooth length in microns.\n    tooth_w: Tooth width in microns.\n\nReturns:\n    Component with four optical ports and electrical heater ports.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "short_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "gap",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "wg_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "w",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "theta0",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.0,
+          "source": "30.0",
+          "name": "theta1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "lead_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5.0,
+          "source": "5.0",
+          "name": "elef_taper_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": [
+            11,
+            11
+          ],
+          "source": "(11, 11)",
+          "name": "pad_size",
+          "annotation": "tuple[float, float]",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": false,
+          "source": "False",
+          "name": "add_teeth",
+          "annotation": "bool",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "tooth_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.2,
+          "source": "1.2",
+          "name": "tooth_w",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "short_width",
+        "gap",
+        "wg_width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_assymmetry_add_drop_w_heater-66b1afff.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_asymmetry:ring_asymmetry",
+      "name": "ring_asymmetry",
+      "title": "Ring Asymmetry",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_asymmetry",
+      "relativeModule": "components.cavities.cavity_wgm.ring_asymmetry",
+      "file": "components/cavities/cavity_wgm/ring_asymmetry.py",
+      "line": 162,
+      "description": "Return an asymmetric racetrack ring coupled to one bus waveguide.",
+      "docstring": "Return an asymmetric racetrack ring coupled to one bus waveguide.\n\nArgs:\n    radius: Bend radius in microns.\n    short_width: Narrow ring width in microns.\n    gap: Ring-to-waveguide gap in microns.\n    wg_width: Bus waveguide width in microns.\n    long_width: Wide ring width in microns.\n    racetrack_len: Straight section length in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with bus waveguide ports `o1` and `o2`.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "short_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "gap",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "wg_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 200,
+          "source": "200",
+          "name": "racetrack_len",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": null,
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "short_width",
+        "gap",
+        "wg_width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_asymmetry-05ad2f3a.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_asymmetry:ring_asymmetry_only",
+      "name": "ring_asymmetry_only",
+      "title": "Ring Asymmetry Only",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_asymmetry",
+      "relativeModule": "components.cavities.cavity_wgm.ring_asymmetry",
+      "file": "components/cavities/cavity_wgm/ring_asymmetry.py",
+      "line": 77,
+      "description": "Return an asymmetric racetrack ring without bus waveguides.",
+      "docstring": "Return an asymmetric racetrack ring without bus waveguides.\n\nArgs:\n    radius: Bend radius in microns.\n    short_width: Narrow ring width in microns.\n    long_width: Wide ring width in microns.\n    racetrack_len: Straight section length in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with optical ports `o1` and `o2`.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "short_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 200,
+          "source": "200",
+          "name": "racetrack_len",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": null,
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "short_width",
+        "long_width",
+        "racetrack_len"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_asymmetry_only-710572a2.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_asymmetry:ring_asymmetry_only_w_heater",
+      "name": "ring_asymmetry_only_w_heater",
+      "title": "Ring Asymmetry Only W Heater",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_asymmetry",
+      "relativeModule": "components.cavities.cavity_wgm.ring_asymmetry",
+      "file": "components/cavities/cavity_wgm/ring_asymmetry.py",
+      "line": 106,
+      "description": "Return an asymmetric ring with integrated arc microheater.",
+      "docstring": "Return an asymmetric ring with integrated arc microheater.\n\nArgs:\n    radius: Bend radius in microns.\n    short_width: Narrow ring width in microns.\n    long_width: Wide ring width in microns.\n    buffer: Positive-resist buffer width in microns.\n    w: Heater width in microns.\n    theta0: Heater start angle in degrees.\n    theta1: Heater end angle in degrees.\n    lead_len: Straight heater lead length in microns.\n    elef_taper_len: Electrical taper length in microns.\n    pad_size: Electrical pad size `(x, y)` in microns.\n    add_teeth: Whether to add meander teeth along the heater.\n    tooth_len: Tooth length in microns.\n    tooth_w: Tooth width in microns.\n\nReturns:\n    Component with optical and electrical ports.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.6,
+          "source": "0.6",
+          "name": "short_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "w",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "theta0",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.0,
+          "source": "30.0",
+          "name": "theta1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "lead_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5.0,
+          "source": "5.0",
+          "name": "elef_taper_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": [
+            11,
+            11
+          ],
+          "source": "(11, 11)",
+          "name": "pad_size",
+          "annotation": "tuple[float, float]",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": false,
+          "source": "False",
+          "name": "add_teeth",
+          "annotation": "bool",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "tooth_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.2,
+          "source": "1.2",
+          "name": "tooth_w",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "short_width",
+        "long_width",
+        "buffer"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_asymmetry_only_w_heater-67d7ac89.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_array_blocks:ring_with_wg_1_in_1",
+      "name": "ring_with_wg_1_in_1",
+      "title": "Ring With Wg 1 In 1",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_array_blocks",
+      "relativeModule": "components.cavities.cavity_wgm.ring_array_blocks",
+      "file": "components/cavities/cavity_wgm/ring_array_blocks.py",
+      "line": 113,
+      "description": "Returns single ring with waveguides aligned to writing field, for 1 ring in 1 field array.",
+      "docstring": "Returns single ring with waveguides aligned to writing field, for 1 ring in 1 field array.\n\nArgs:\n    radius: Ring radius.\n    gap: Ring - waveguide gap.\n    width_wg: Waveguide width.\n    width_ring: Ring width.\n    offset: Offset from the left edge of the field.\n    total_length: Total length of the component.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 180,
+          "source": "180",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_ring",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2000,
+          "source": "2000",
+          "name": "offset",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 12000,
+          "source": "12000",
+          "name": "total_length",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "gap",
+        "width_wg",
+        "width_ring"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_with_wg_1_in_1-035e4519.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_array_blocks:ring_with_wg_1_in_2",
+      "name": "ring_with_wg_1_in_2",
+      "title": "Ring With Wg 1 In 2",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_array_blocks",
+      "relativeModule": "components.cavities.cavity_wgm.ring_array_blocks",
+      "file": "components/cavities/cavity_wgm/ring_array_blocks.py",
+      "line": 163,
+      "description": "Returns single ring with waveguides aligned to writing field, for 1 ring in 2 field array.",
+      "docstring": "Returns single ring with waveguides aligned to writing field, for 1 ring in 2 field array.\n\nArgs:\n    radius: Ring radius.\n    gap: Ring - waveguide gap.\n    width_wg: Waveguide width.\n    width_ring: Ring width.\n    offset: Offset from the left edge of the field.\n    total_length: Total length of the component.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 300,
+          "source": "300",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.5,
+          "source": "1.5",
+          "name": "width_ring",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0,
+          "source": "0",
+          "name": "offset",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10000,
+          "source": "10000",
+          "name": "total_length",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "gap",
+        "width_wg",
+        "width_ring"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_with_wg_1_in_2-93174863.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_array_blocks:ring_with_wg_2_in_1",
+      "name": "ring_with_wg_2_in_1",
+      "title": "Ring With Wg 2 In 1",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_array_blocks",
+      "relativeModule": "components.cavities.cavity_wgm.ring_array_blocks",
+      "file": "components/cavities/cavity_wgm/ring_array_blocks.py",
+      "line": 12,
+      "description": "Returns single ring with waveguides aligh to writing field, for 2 rings in 1 field array.",
+      "docstring": "Returns single ring with waveguides aligh to writing field, for 2 rings in 1 field array.\n\nArgs:\n    radius: Ring radius.\n    gap: Ring - waveguide gap.\n    width_wg: Waveguide width.\n    width_ring: Ring width.\n    offset: Offset from the left edge of the field.\n    total_length: Total length of the component.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 80,
+          "source": "80",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_ring",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0,
+          "source": "0",
+          "name": "offset",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 12000,
+          "source": "12000",
+          "name": "total_length",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "gap",
+        "width_wg",
+        "width_ring"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_with_wg_2_in_1-250f1bd5.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.cavities.cavity_wgm.ring_array_blocks:ring_with_wg_3_in_2",
+      "name": "ring_with_wg_3_in_2",
+      "title": "Ring With Wg 3 In 2",
+      "category": "cavities",
+      "module": "YanglabPDK.components.cavities.cavity_wgm.ring_array_blocks",
+      "relativeModule": "components.cavities.cavity_wgm.ring_array_blocks",
+      "file": "components/cavities/cavity_wgm/ring_array_blocks.py",
+      "line": 63,
+      "description": "Returns single ring with waveguides aligned to writing field, 3 rings in 2 field array.",
+      "docstring": "Returns single ring with waveguides aligned to writing field, 3 rings in 2 field array.\n\nArgs:\n    radius: Ring radius.\n    gap: Ring - waveguide gap.\n    width_wg: Waveguide width.\n    width_ring: Ring width.\n    offset: Offset from the left edge of the field.\n    total_length: Total length of the component.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 105,
+          "source": "105",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_ring",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0,
+          "source": "0",
+          "name": "offset",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 12000,
+          "source": "12000",
+          "name": "total_length",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "gap",
+        "width_wg",
+        "width_ring"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/ring_with_wg_3_in_2-3f8cf39a.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler90bend:coupler90bend",
+      "name": "coupler90bend",
+      "title": "Coupler90Bend",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler90bend",
+      "relativeModule": "components.couplers.coupler90bend",
+      "file": "components/couplers/coupler90bend.py",
+      "line": 7,
+      "description": "Returns 2 coupled bends.",
+      "docstring": "Returns 2 coupled bends.\n\nArgs:\n    radius: um.\n    gap: um.\n    bend: for bend.\n    width_outter: outter bend width um.\n    width_inner: inner bend width um.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.\n\n\n.. code::\n\n        r   3 4\n        |   | |\n        |  / /\n        | / /\n    2____/ /\n    1_____/",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100.0,
+          "source": "100.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_outter",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_inner",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "gap",
+        "width_outter",
+        "width_inner"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler90bend-6578d08c.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler90:coupler90circular",
+      "name": "coupler90circular",
+      "title": "Coupler90Circular",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler90",
+      "relativeModule": "components.couplers.coupler90",
+      "file": "components/couplers/coupler90.py",
+      "line": 56,
+      "description": "Straight coupled to a bend.",
+      "docstring": "Straight coupled to a bend.\n\nArgs:\n    gap: um.\n    radius: um.\n    straight: for straight.\n    width: um.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n        o3\n         |\n        /\n       /\n   o2_/\n   o1___o4",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 100.0,
+          "source": "100.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "gap",
+        "radius",
+        "width",
+        "buffer"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler90circular-165ac5c5.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler90:coupler90circular_asymmetric",
+      "name": "coupler90circular_asymmetric",
+      "title": "Coupler90Circular Asymmetric",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler90",
+      "relativeModule": "components.couplers.coupler90",
+      "file": "components/couplers/coupler90.py",
+      "line": 101,
+      "description": "Straight coupled to a bend.",
+      "docstring": "Straight coupled to a bend.\n\nArgs:\n    gap: um.\n    radius: um.\n    straight: for straight.\n    width_wg: width of bus waveguide um.\n    width_bend: width of bend um.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n        o3\n         |\n        /\n       /\n   o2_/\n   o1___o4",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 100.0,
+          "source": "100.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_wg",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_bend",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "gap",
+        "radius",
+        "width_wg",
+        "width_bend"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler90circular_asymmetric-27e0b861.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler90:coupler90euler",
+      "name": "coupler90euler",
+      "title": "Coupler90Euler",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler90",
+      "relativeModule": "components.couplers.coupler90",
+      "file": "components/couplers/coupler90.py",
+      "line": 9,
+      "description": "Straight coupled to a bend.",
+      "docstring": "Straight coupled to a bend.\n\nArgs:\n    gap: um.\n    radius: um.\n    p: proportion of the curve that is an Euler curve.\n    straight: for straight.\n    width: um.\n    buffer: buffer width for positive tone resist (um)\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n        o3\n         |\n        /\n       /\n   o2_/\n   o1___o4",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 100.0,
+          "source": "100.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "p",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "gap",
+        "radius",
+        "p",
+        "width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler90euler-03c0e5a4.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler_adiabatic:coupler_adiabatic_50",
+      "name": "coupler_adiabatic_50",
+      "title": "Coupler Adiabatic 50",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler_adiabatic",
+      "relativeModule": "components.couplers.coupler_adiabatic",
+      "file": "components/couplers/coupler_adiabatic.py",
+      "line": 96,
+      "description": "Returns 50/50 adiabatic coupler.",
+      "docstring": "Returns 50/50 adiabatic coupler.\n\nDesign based on asymmetric adiabatic 3dB coupler designs, such as:\n- https://doi.org/10.1364/CLEO.2010.CThAA2\n- https://doi.org/10.1364/CLEO_SI.2017.SF1I.5\n- https://doi.org/10.1364/CLEO_SI.2018.STh4B.4\n\nThe coupler consists of:\n1. Left taper region (l_left_taper): input waveguides taper by +dw and -dw.\n2. Left S-bend region (l_left_s): constant, unbalanced widths.\n3. Coupler taper region (l_coupler_taper): asymmetric waveguides gradually come together.\n4. Directional coupler region (l_coupler_directional): coupling occurs, widths become equal.\n5. Right S-bend region (l_right_s): output waveguides separate.\n6. Right taper region (l_right_taper): waveguides taper back to original width.\n\nArgs:\n    l_left_taper: Length of the left taper region (um).\n    l_left_s: Length of the left S-bend region (um).\n    l_coupler_taper: Length of the coupler taper region (um).\n    l_coupler_directional: Length of the directional coupler region (um).\n    l_right_s: Length of the right S-bend region (um).\n    l_right_taper: Length of the right taper region (um).\n    gap: Gap between the two waveguides in the coupling region (um).\n    width: Width of the waveguides (um).\n    width_inner: Width of the inner waveguides in the coupling region (um).\n    dw: Delta width; top arm tapers to width+dw, bottom to width-dw (um).\n    input_wg_sep: Separation between input waveguides, center-to-center (um).\n    output_wg_sep: Separation between output waveguides, center-to-center (um).\n    buffer: Buffer around the waveguides (um).\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 20.0,
+          "source": "20.0",
+          "name": "l_left_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20.0,
+          "source": "20.0",
+          "name": "l_left_s",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 50.0,
+          "source": "50.0",
+          "name": "l_coupler_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.0,
+          "source": "30.0",
+          "name": "l_coupler_directional",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.0,
+          "source": "30.0",
+          "name": "l_right_s",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 20.0,
+          "source": "20.0",
+          "name": "l_right_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.0,
+          "source": "1.0",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "width_inner",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "dw",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "input_wg_sep",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "output_wg_sep",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "l_left_taper",
+        "l_left_s",
+        "l_coupler_taper",
+        "l_coupler_directional"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler_adiabatic_50-285b08e5.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler_asymmetric:coupler_asymmetric",
+      "name": "coupler_asymmetric",
+      "title": "Coupler Asymmetric",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler_asymmetric",
+      "relativeModule": "components.couplers.coupler_asymmetric",
+      "file": "components/couplers/coupler_asymmetric.py",
+      "line": 7,
+      "description": "Bend coupled to straight waveguide.",
+      "docstring": "Bend coupled to straight waveguide.\n\nArgs:\n    gap: um.\n    dy: port to port vertical spacing.\n    dx: bend length in x direction.\n    width: waveguide width in um.\n    buffer: buffer.\n\nReturns:\n    Component with the generated layout.\n    \n\n.. code::\n\n                    dx\n                 |-----|\n                  _____ o2\n                 /         |\n           _____/          |\n     gap o1____________    |  dy\n                        o3",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 0.234,
+          "source": "0.234",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.5,
+          "source": "2.5",
+          "name": "dy",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "dx",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "gap",
+        "dy",
+        "dx",
+        "width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler_asymmetric-d46ec5d3.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler_bent:coupler_bent",
+      "name": "coupler_bent",
+      "title": "Coupler Bent",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler_bent",
+      "relativeModule": "components.couplers.coupler_bent",
+      "file": "components/couplers/coupler_bent.py",
+      "line": 8,
+      "description": "Compact curved coupler with bezier escape.",
+      "docstring": "Compact curved coupler with bezier escape.\n\nTODO: fix for euler bends.\n\nArgs:\n    radius: um.\n    gap: um.\n    angle_inner: of the inner bend, from beginning to end. Depending on the bend chosen, gap may not be preserved.\n    angle_outer: of the outer bend, from beginning to end. Depending on the bend chosen, gap may not be preserved.\n    bend: for bend.\n    cross_section: cross_section.\n    cross_section_inner: spec inner bend.\n    cross_section_outer: spec outer bend.\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n        r   4\n        |   |\n        |  / ___3\n        | / /\n    2____/ /\n    1_____/",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 100,
+          "source": "100",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "coupler_gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 120.0,
+          "source": "120.0",
+          "name": "coupling_angle_coverage",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_inner",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_outer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "coupler_gap",
+        "coupling_angle_coverage",
+        "width_inner"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler_bent-1870cb21.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.couplers.coupler_straight_asymmetric:coupler_straight_asymmetric",
+      "name": "coupler_straight_asymmetric",
+      "title": "Coupler Straight Asymmetric",
+      "category": "couplers",
+      "module": "YanglabPDK.components.couplers.coupler_straight_asymmetric",
+      "relativeModule": "components.couplers.coupler_straight_asymmetric",
+      "file": "components/couplers/coupler_straight_asymmetric.py",
+      "line": 9,
+      "description": "Coupler with two parallel straights of different widths.",
+      "docstring": "Coupler with two parallel straights of different widths.\n\nArgs:\n    length: of straight.\n    gap: between straights.\n    width_top: of top straight.\n    width_bot: of bottom straight.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 10.0,
+          "source": "10.0",
+          "name": "length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.27,
+          "source": "0.27",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "width_top",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width_bot",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "length",
+        "gap",
+        "width_top",
+        "width_bot"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/coupler_straight_asymmetric-c142f2fa.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.filters.dbr:dbr_cell",
+      "name": "dbr_cell",
+      "title": "Dbr Cell",
+      "category": "filters",
+      "module": "YanglabPDK.components.filters.dbr",
+      "relativeModule": "components.filters.dbr",
+      "file": "components/filters/dbr.py",
+      "line": 19,
+      "description": "Distributed Bragg Reflector unit cell.",
+      "docstring": "Distributed Bragg Reflector unit cell.\n\nArgs:\n    w1: thin width in um.\n    l1: thin length in um.\n    w2: thick width in um.\n    l2: thick length in um.\n    n: number of periods.\n    cross_section: cross_section spec.\n\nReturns:\n    Component with the generated layout.\n\n.. code::\n\n       l1      l2\n    <-----><-------->\n            _________\n    _______|\n\n      w1       w2\n    _______\n           |_________",
+      "parameters": [
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "w1",
+          "name": "w1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "w2",
+          "name": "w2",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "period / 2",
+          "name": "l1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "period / 2",
+          "name": "l2",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "w1",
+        "w2",
+        "l1",
+        "l2"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/dbr_cell-deca5100.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.lasers.sagnet_feedback:sagnet_feedback_1",
+      "name": "sagnet_feedback_1",
+      "title": "Sagnet Feedback 1",
+      "category": "lasers",
+      "module": "YanglabPDK.components.lasers.sagnet_feedback",
+      "relativeModule": "components.lasers.sagnet_feedback",
+      "file": "components/lasers/sagnet_feedback.py",
+      "line": 95,
+      "description": "Return an alternate Sagnac-feedback ring routing.",
+      "docstring": "Return an alternate Sagnac-feedback ring routing.\n\nArgs:\n    radius_loop: Sagnac loop bend radius in microns.\n    length_loop: Sagnac loop routing length in microns.\n    width: Main waveguide width in microns.\n    wg_width: Add-drop bus waveguide width in microns.\n    short_width: Narrow ring width in microns.\n    long_width: Wide ring width in microns.\n    width_taper: MMI taper width in microns.\n    length_taper: MMI taper length in microns.\n    length_mmi: MMI body length in microns.\n    width_mmi: MMI body width in microns.\n    gap_mmi: MMI output gap in microns.\n    radius: Ring radius in microns.\n    gap: Ring coupling gap in microns.\n    racetrack_len: Ring straight section length in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with optical ports `o1` and `o2`.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 75,
+          "source": "75",
+          "name": "radius_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 250,
+          "source": "250",
+          "name": "length_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "wg_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "short_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.424,
+          "source": "2.424",
+          "name": "width_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "length_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.424,
+          "source": "30.424",
+          "name": "length_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 6.024,
+          "source": "6.024",
+          "name": "width_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.675,
+          "source": "0.675",
+          "name": "gap_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 99,
+          "source": "99",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.45,
+          "source": "0.45",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 190,
+          "source": "190",
+          "name": "racetrack_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius_loop",
+        "length_loop",
+        "width",
+        "wg_width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/sagnet_feedback_1-4bbd69f7.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.lasers.sagnet_feedback:sagnet_feedback_with_curve",
+      "name": "sagnet_feedback_with_curve",
+      "title": "Sagnet Feedback With Curve",
+      "category": "lasers",
+      "module": "YanglabPDK.components.lasers.sagnet_feedback",
+      "relativeModule": "components.lasers.sagnet_feedback",
+      "file": "components/lasers/sagnet_feedback.py",
+      "line": 163,
+      "description": "Return a Sagnac-feedback ring with curved output routing.",
+      "docstring": "Return a Sagnac-feedback ring with curved output routing.\n\nArgs:\n    radius_loop: Sagnac loop bend radius in microns.\n    length_loop: Sagnac loop routing length in microns.\n    width: Main waveguide width in microns.\n    wg_width: Add-drop bus waveguide width in microns.\n    short_width: Narrow ring width in microns.\n    long_width: Wide ring width in microns.\n    width_taper: MMI taper width in microns.\n    length_taper: MMI taper length in microns.\n    length_mmi: MMI body length in microns.\n    width_mmi: MMI body width in microns.\n    gap_mmi: MMI output gap in microns.\n    radius: Ring radius in microns.\n    gap: Ring coupling gap in microns.\n    racetrack_len: Ring straight section length in microns.\n    radius_outbend: Output bend radius in microns.\n    angle_outbend: Output bend angle in degrees.\n    total_lens: Total routed length in microns.\n    offset: Horizontal routing offset in microns.\n    pos_edge_coupler: Edge coupler position in microns.\n    edge_coupler_len: Edge taper length in microns.\n    edge_coupler_width: Edge coupler tip width in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with routed optical ports.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 75,
+          "source": "75",
+          "name": "radius_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 250,
+          "source": "250",
+          "name": "length_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "wg_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "short_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.424,
+          "source": "2.424",
+          "name": "width_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "length_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.424,
+          "source": "30.424",
+          "name": "length_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 6.024,
+          "source": "6.024",
+          "name": "width_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.675,
+          "source": "0.675",
+          "name": "gap_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 99,
+          "source": "99",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.45,
+          "source": "0.45",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 200,
+          "source": "200",
+          "name": "racetrack_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 280,
+          "source": "280",
+          "name": "radius_outbend",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 110,
+          "source": "110",
+          "name": "angle_outbend",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 12000,
+          "source": "12000",
+          "name": "total_lens",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 4000,
+          "source": "4000",
+          "name": "offset",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3010,
+          "source": "3010",
+          "name": "pos_edge_coupler",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 250,
+          "source": "250",
+          "name": "edge_coupler_len",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.15,
+          "source": "0.15",
+          "name": "edge_coupler_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius_loop",
+        "length_loop",
+        "width",
+        "wg_width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/sagnet_feedback_with_curve-6f7e33ae.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.lasers.sagnet_feedback:sagnet_feedback_with_curve_micro_heater",
+      "name": "sagnet_feedback_with_curve_micro_heater",
+      "title": "Sagnet Feedback With Curve Micro Heater",
+      "category": "lasers",
+      "module": "YanglabPDK.components.lasers.sagnet_feedback",
+      "relativeModule": "components.lasers.sagnet_feedback",
+      "file": "components/lasers/sagnet_feedback.py",
+      "line": 250,
+      "description": "Return a curved Sagnac-feedback ring with a straight microheater.",
+      "docstring": "Return a curved Sagnac-feedback ring with a straight microheater.\n\nArgs:\n    radius_loop: Sagnac loop bend radius in microns.\n    length_loop: Sagnac loop routing length in microns.\n    width: Main waveguide width in microns.\n    wg_width: Add-drop bus waveguide width in microns.\n    short_width: Narrow ring width in microns.\n    long_width: Wide ring width in microns.\n    width_taper: MMI taper width in microns.\n    length_taper: MMI taper length in microns.\n    length_mmi: MMI body length in microns.\n    width_mmi: MMI body width in microns.\n    gap_mmi: MMI output gap in microns.\n    radius: Ring radius in microns.\n    gap: Ring coupling gap in microns.\n    racetrack_len: Ring straight section length in microns.\n    radius_outbend: Output bend radius in microns.\n    angle_outbend: Output bend angle in degrees.\n    total_lens: Total routed length in microns.\n    offset: Horizontal routing offset in microns.\n    pos_edge_coupler: Edge coupler position in microns.\n    edge_coupler_len: Edge taper length in microns.\n    edge_coupler_width: Edge coupler tip width in microns.\n    heater_length: Heater length in microns.\n    heater_width: Heater width in microns.\n    heater_offset: Heater offset from the output routing in microns.\n    buffer: Positive-resist buffer width in microns.\n\nReturns:\n    Component with optical ports and heater metal geometry.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 75,
+          "source": "75",
+          "name": "radius_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 250,
+          "source": "250",
+          "name": "length_loop",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1,
+          "source": "1",
+          "name": "width",
+          "annotation": "float | None",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "wg_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "short_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2,
+          "source": "2",
+          "name": "long_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 2.424,
+          "source": "2.424",
+          "name": "width_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "length_taper",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.424,
+          "source": "30.424",
+          "name": "length_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 6.024,
+          "source": "6.024",
+          "name": "width_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.675,
+          "source": "0.675",
+          "name": "gap_mmi",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 99,
+          "source": "99",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.45,
+          "source": "0.45",
+          "name": "gap",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 200,
+          "source": "200",
+          "name": "racetrack_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 280,
+          "source": "280",
+          "name": "radius_outbend",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 110,
+          "source": "110",
+          "name": "angle_outbend",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 12000,
+          "source": "12000",
+          "name": "total_lens",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 4000,
+          "source": "4000",
+          "name": "offset",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3010,
+          "source": "3010",
+          "name": "pos_edge_coupler",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 250,
+          "source": "250",
+          "name": "edge_coupler_len",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.15,
+          "source": "0.15",
+          "name": "edge_coupler_width",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 500,
+          "source": "500",
+          "name": "heater_length",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "heater_width",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3000,
+          "source": "3000",
+          "name": "heater_offset",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius_loop",
+        "length_loop",
+        "width",
+        "wg_width"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/sagnet_feedback_with_curve_micro_heater-f98203ef.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.metals.heater:microheater_arc_with_teeth",
+      "name": "microheater_arc_with_teeth",
+      "title": "Microheater Arc With Teeth",
+      "category": "metals",
+      "module": "YanglabPDK.components.metals.heater",
+      "relativeModule": "components.metals.heater",
+      "file": "components/metals/heater.py",
+      "line": 99,
+      "description": "Return an arc-shaped microheater with pads and optional meander teeth.",
+      "docstring": "Return an arc-shaped microheater with pads and optional meander teeth.\n\nArgs:\n    R: Heater centerline radius in microns.\n    w: Heater trace width in microns.\n    theta0: Start angle in degrees.\n    theta1: End angle in degrees.\n    lead_len: Straight lead length in microns.\n    elef_taper_len: Electrical taper length in microns.\n    pad_size: Electrical pad size `(x, y)` in microns.\n    add_teeth: Whether to add meander teeth along the arc.\n    tooth_len: Tooth length in microns.\n    tooth_w: Tooth width along the tangent direction in microns.\n\nReturns:\n    Component with heater metal, pads, and electrical ports.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 30.0,
+          "source": "30.0",
+          "name": "R",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.5,
+          "source": "0.5",
+          "name": "w",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30,
+          "source": "30",
+          "name": "theta0",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 30.0,
+          "source": "30.0",
+          "name": "theta1",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "lead_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 5.0,
+          "source": "5.0",
+          "name": "elef_taper_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": [
+            11,
+            11
+          ],
+          "source": "(11, 11)",
+          "name": "pad_size",
+          "annotation": "tuple[float, float]",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": false,
+          "source": "False",
+          "name": "add_teeth",
+          "annotation": "bool",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "tooth_len",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.2,
+          "source": "1.2",
+          "name": "tooth_w",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "R",
+        "w",
+        "theta0",
+        "theta1"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/microheater_arc_with_teeth-55704da1.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.shapes.circles:angled_arc_with_port",
+      "name": "angled_arc_with_port",
+      "title": "Angled Arc With Port",
+      "category": "shapes",
+      "module": "YanglabPDK.components.shapes.circles",
+      "relativeModule": "components.shapes.circles",
+      "file": "components/shapes/circles.py",
+      "line": 228,
+      "description": "Generate a semicircle geometry (0° to 180°).",
+      "docstring": "Generate a semicircle geometry (0° to 180°).\n\nArgs:\n    radius: radius of the semicircle.\n    angle_resolution: number of degrees per point.\n    layer: layer.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 50.0,
+          "source": "50.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 90.0,
+          "source": "90.0",
+          "name": "angle",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "angle_resolution",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.0,
+          "source": "1.0",
+          "name": "port_width_in",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "port_width_out",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "port_gap_out",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 21,
+          "source": "21",
+          "name": "port_number_out",
+          "annotation": "int",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle",
+        "angle_resolution",
+        "buffer"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/angled_arc_with_port-168dc548.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.shapes.circles:quarter_circle",
+      "name": "quarter_circle",
+      "title": "Quarter Circle",
+      "category": "shapes",
+      "module": "YanglabPDK.components.shapes.circles",
+      "relativeModule": "components.shapes.circles",
+      "file": "components/shapes/circles.py",
+      "line": 53,
+      "description": "Generate a quarter circle geometry (0° to 90°).",
+      "docstring": "Generate a quarter circle geometry (0° to 90°).\n\nArgs:\n    radius: radius of the quarter circle.\n    angle_resolution: number of degrees per point.\n    layer: layer.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 50.0,
+          "source": "50.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "angle_resolution",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "LAYER.NR",
+          "name": "layer",
+          "annotation": "tuple",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle_resolution",
+        "layer"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/quarter_circle-02a26f8f.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.shapes.circles:rowland_circle_with_port",
+      "name": "rowland_circle_with_port",
+      "title": "Rowland Circle With Port",
+      "category": "shapes",
+      "module": "YanglabPDK.components.shapes.circles",
+      "relativeModule": "components.shapes.circles",
+      "file": "components/shapes/circles.py",
+      "line": 311,
+      "description": "Generate a semicircle geometry (0° to 180°).",
+      "docstring": "Generate a semicircle geometry (0° to 180°).\n\nArgs:\n    radius: radius of the semicircle.\n    angle_resolution: number of degrees per point.\n    layer: layer.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 50.0,
+          "source": "50.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 75.0,
+          "source": "75.0",
+          "name": "angle",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "angle_resolution",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "port_width_in",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "port_width_out",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "port_gap_out",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 21,
+          "source": "21",
+          "name": "port_number_out",
+          "annotation": "int",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 8,
+          "source": "8",
+          "name": "port_number_in",
+          "annotation": "int",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.336,
+          "source": "0.336",
+          "name": "port_gap_in",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle",
+        "angle_resolution",
+        "buffer"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/rowland_circle_with_port-679e556a.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.shapes.circles:semi_circle",
+      "name": "semi_circle",
+      "title": "Semi Circle",
+      "category": "shapes",
+      "module": "YanglabPDK.components.shapes.circles",
+      "relativeModule": "components.shapes.circles",
+      "file": "components/shapes/circles.py",
+      "line": 85,
+      "description": "Generate a semicircle geometry (0° to 180°).",
+      "docstring": "Generate a semicircle geometry (0° to 180°).\n\nArgs:\n    radius: radius of the semicircle.\n    angle_resolution: number of degrees per point.\n    layer: layer.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 50.0,
+          "source": "50.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "angle_resolution",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle_resolution",
+        "buffer"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/semi_circle-c09d7896.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.shapes.circles:semi_circle_with_port",
+      "name": "semi_circle_with_port",
+      "title": "Semi Circle With Port",
+      "category": "shapes",
+      "module": "YanglabPDK.components.shapes.circles",
+      "relativeModule": "components.shapes.circles",
+      "file": "components/shapes/circles.py",
+      "line": 130,
+      "description": "Generate a semicircle geometry (0° to 180°).",
+      "docstring": "Generate a semicircle geometry (0° to 180°).\n\nArgs:\n    radius: radius of the semicircle.\n    angle_resolution: number of degrees per point.\n    layer: layer.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 50.0,
+          "source": "50.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "angle_resolution",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3.0,
+          "source": "3.0",
+          "name": "buffer",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 1.0,
+          "source": "1.0",
+          "name": "port_width_in",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.8,
+          "source": "0.8",
+          "name": "port_width_out",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.2,
+          "source": "0.2",
+          "name": "port_gap_out",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 21,
+          "source": "21",
+          "name": "port_number_out",
+          "annotation": "int",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle_resolution",
+        "buffer",
+        "port_width_in"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/semi_circle_with_port-2947bad3.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.shapes.circles:single_semi_circle",
+      "name": "single_semi_circle",
+      "title": "Single Semi Circle",
+      "category": "shapes",
+      "module": "YanglabPDK.components.shapes.circles",
+      "relativeModule": "components.shapes.circles",
+      "file": "components/shapes/circles.py",
+      "line": 21,
+      "description": "Generate a semicircle geometry (0° to 180°).",
+      "docstring": "Generate a semicircle geometry (0° to 180°).\n\nArgs:\n    radius: radius of the semicircle.\n    angle_resolution: number of degrees per point.\n    layer: layer.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 50.0,
+          "source": "50.0",
+          "name": "radius",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 0.1,
+          "source": "0.1",
+          "name": "angle_resolution",
+          "annotation": "float",
+          "keywordOnly": false
+        },
+        {
+          "kind": "expression",
+          "value": null,
+          "source": "LAYER.NR",
+          "name": "layer",
+          "annotation": "tuple",
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "radius",
+        "angle_resolution",
+        "layer"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/single_semi_circle-833eb562.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.utils.field:dicing_lane",
+      "name": "dicing_lane",
+      "title": "Dicing Lane",
+      "category": "utils",
+      "module": "YanglabPDK.components.utils.field",
+      "relativeModule": "components.utils.field",
+      "file": "components/utils/field.py",
+      "line": 102,
+      "description": "Returns a dicing lane component with four rectangles on the edges of the die.",
+      "docstring": "Returns a dicing lane component with four rectangles on the edges of the die.\n\nArgs:\n    size (tuple): Size of the die (width, height) in microns.\n\nThe function places four rectangles (dicing marks) on the left, right, top, and bottom edges\nof the die area, using the CUT layer defined in LAYER.CUT. These marks are typically used\nto guide wafer dicing after fabrication.\n\nReturns:\n    Component with the generated layout.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": [
+            6500,
+            14000
+          ],
+          "source": "(6500, 14000)",
+          "name": "size",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": "X",
+          "source": "'X'",
+          "name": "orientation",
+          "annotation": null,
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "size",
+        "orientation"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/dicing_lane-8a982dbb.png",
+      "previewStatus": "ready"
+    },
+    {
+      "id": "components.utils.field:die_marker_field",
+      "name": "die_marker_field",
+      "title": "Die Marker Field",
+      "category": "utils",
+      "module": "YanglabPDK.components.utils.field",
+      "relativeModule": "components.utils.field",
+      "file": "components/utils/field.py",
+      "line": 11,
+      "description": "Return a die field grid with alignment markers and anchors.",
+      "docstring": "Return a die field grid with alignment markers and anchors.\n\nArgs:\n    field_size: E-beam/write field size in microns.\n    die_size: Die size `(width, height)` in microns.\n    mark_pair_num: Number of marker pairs to place around the die.\n    calipers: Optional caliper component to place near the die edge.\n    expose_marker_list: Marker indices that should receive expose windows.\n\nReturns:\n    Component containing field boxes, markers, anchors, and optional calipers.",
+      "parameters": [
+        {
+          "kind": "literal",
+          "value": 1000,
+          "source": "1000",
+          "name": "field_size",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": [
+            10000,
+            10000
+          ],
+          "source": "(10000, 10000)",
+          "name": "die_size",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": 3,
+          "source": "3",
+          "name": "mark_pair_num",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": null,
+          "source": "None",
+          "name": "calipers",
+          "annotation": null,
+          "keywordOnly": false
+        },
+        {
+          "kind": "literal",
+          "value": null,
+          "source": "None",
+          "name": "expose_marker_list",
+          "annotation": null,
+          "keywordOnly": false
+        }
+      ],
+      "recommended": [
+        "field_size",
+        "die_size",
+        "mark_pair_num",
+        "calipers"
+      ],
+      "registered": false,
+      "status": "discovered",
+      "previewParameters": {},
+      "thumbnail": "thumbnails/die_marker_field-68bb7278.png",
+      "previewStatus": "ready"
+    }
+  ]
+}
