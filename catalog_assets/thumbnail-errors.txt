@@ -1,0 +1,1 @@
+components.cavities.cavity_wgm.ring_PhC:ring_PhC: Required parameters: width_file
