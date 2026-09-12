@@ -170,8 +170,21 @@ def coupler_halfring_pulley(
 
     distance = abs(cbl.ports["o3"].x - cbl.ports["o2"].x)
 
-    s1 = c << straight(length=length_extension_left-length_x/2 - distance, width=width_wg, buffer=buffer)
-    s2 = c << straight(length=length_extension_right-length_x/2 - distance, width=width_wg, buffer=buffer)
+    minimum_left_extension = length_x / 2 + distance
+    minimum_right_extension = length_x / 2 + distance
+    if length_extension_left < minimum_left_extension:
+        raise ValueError(
+            "length_extension_left must be at least "
+            f"{minimum_left_extension:g} um for the selected radius and angle"
+        )
+    if length_extension_right < minimum_right_extension:
+        raise ValueError(
+            "length_extension_right must be at least "
+            f"{minimum_right_extension:g} um for the selected radius and angle"
+        )
+
+    s1 = c << straight(length=length_extension_left - length_x / 2 - distance, width=width_wg, buffer=buffer)
+    s2 = c << straight(length=length_extension_right - length_x / 2 - distance, width=width_wg, buffer=buffer)
 
     s1.connect("o2", cbl.ports["o3"])
     s2.connect("o1", cbr.ports["o3"])

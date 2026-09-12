@@ -61,12 +61,10 @@ def mzi_mmi(
     straight_edge_right = c << straight(length=edge_length, width=width, buffer=buffer)
     straight_edge_left.connect("o1", mmi_left.ports["o1"])
     straight_edge_right.connect("o1", mmi_right.ports["o1"])
-    c = Utils.pos_neg_seperate(c)
-    c.flatten()
-    
     c.add_port(name="o1", port=straight_edge_left.ports["o2"])
     c.add_port(name="o2", port=straight_edge_right.ports["o2"])
-    c.draw_ports()
+    c = Utils.pos_neg_seperate(c)
+    c.flatten()
     return c
 
 if __name__ == "__main__":

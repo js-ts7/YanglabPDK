@@ -8,7 +8,7 @@ resolved later by `YanglabUtils.pos_neg_seperate`.
 
 import gdsfactory as gf
 
-from YanglabPDK import *
+from YanglabPDK.YanglabLayerStack import YanglabLayerMap as LAYER
 
 
 @gf.xsection

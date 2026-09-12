@@ -3,6 +3,18 @@ import gdsfactory as gf
 from YanglabPDK import YanglabUtils as Utils
 from YanglabPDK import YanglabSections as Sections
 
+
+def _to_component(component):
+    if not isinstance(component, gf.ComponentAllAngle):
+        return component
+
+    flattened = gf.Component()
+    flattened.add_ref_off_grid(component)
+    for port in component.ports:
+        flattened.add_port(name=port.name, port=port)
+    flattened.flatten()
+    return flattened
+
 @gf.cell
 def bend_euler(
     radius: float = 100, 
@@ -23,7 +35,24 @@ def bend_euler(
     Returns:
         Component with the generated layout.
     """
-    return Utils.pos_neg_seperate(gf.components.bend_euler(radius=radius, angle=angle, with_arc_floorplan=False, p=p, cross_section=Sections.pos_neg_resist(width=width, buffer=buffer)))
+    if angle in (90, 180):
+        component = gf.components.bend_euler(
+            radius=radius,
+            angle=angle,
+            with_arc_floorplan=False,
+            p=p,
+            cross_section=Sections.pos_neg_resist(width=width, buffer=buffer),
+        )
+    else:
+        component = gf.components.bend_euler_all_angle(
+            radius=radius,
+            angle=angle,
+            with_arc_floorplan=False,
+            p=p,
+            cross_section=Sections.pos_neg_resist(width=width, buffer=buffer),
+        )
+
+    return Utils.pos_neg_seperate(_to_component(component))
 
 @gf.cell
 def bend_euler_s(

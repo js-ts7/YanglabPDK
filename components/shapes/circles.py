@@ -11,8 +11,8 @@ Description  :
 Copyright (c) 2026 by Prof. Lan Yang Lab, All Rights Reserved. 
 '''
 
-from YanglabPDK import *
 import gdsfactory as gf
+from YanglabPDK.YanglabLayerStack import YanglabLayerMap as LAYER
 from YanglabPDK.YanglabUtils import remap_layers, pos_neg_seperate, round_unit
 from YanglabPDK.components.waveguides.straight import straight  
 import numpy as np
@@ -386,7 +386,6 @@ def rowland_circle_with_port(
     # C is the semicircle on NR layer, we need to offset it inward to get PR layer
     new_c = c.copy()
     new_c.offset(distance=buffer, layer=LAYER.NR)
-    new_c.show()
     new_c = remap_layers(
         comp=new_c,
         old_layer=LAYER.NR,
