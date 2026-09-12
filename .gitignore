@@ -1,5 +1,10 @@
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.vsix
+node_modules/
 
 # Local documentation build outputs.
 docs/_build/
