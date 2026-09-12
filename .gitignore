@@ -5,3 +5,9 @@ __pycache__/
 docs/_build/
 docs/_static/component_previews/
 
+# YanglabPDK Explorer build outputs.
+vscode-extension/node_modules/
+vscode-extension/resources/
+vscode-extension/*.vsix
+catalog_assets/thumbnails/*.tmp.png
+

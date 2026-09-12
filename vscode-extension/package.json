@@ -1,0 +1,145 @@
+{
+  "name": "yanglabpdk-explorer",
+  "displayName": "YanglabPDK Explorer",
+  "description": "Browse YanglabPDK cells, inspect parameters, and insert ready-to-edit Python snippets.",
+  "version": "0.1.0",
+  "publisher": "yanglab-local",
+  "license": "UNLICENSED",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onView:yanglabPdk.components",
+    "onView:yanglabPdk.details",
+    "onCommand:yanglabPdk.search",
+    "onCommand:yanglabPdk.refreshCatalog",
+    "onCommand:yanglabPdk.regenerateThumbnails",
+    "onCommand:yanglabPdk.insertComponent",
+    "onCommand:yanglabPdk.openSource"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "yanglabPdk",
+          "title": "YanglabPDK",
+          "icon": "media/chip.svg"
+        }
+      ]
+    },
+    "views": {
+      "yanglabPdk": [
+        {
+          "id": "yanglabPdk.components",
+          "name": "Components"
+        },
+        {
+          "type": "webview",
+          "id": "yanglabPdk.details",
+          "name": "Component Details"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "yanglabPdk.search",
+        "title": "Search Components",
+        "icon": "$(search)"
+      },
+      {
+        "command": "yanglabPdk.clearSearch",
+        "title": "Clear Search",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "yanglabPdk.refreshCatalog",
+        "title": "Refresh Catalog",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "yanglabPdk.regenerateThumbnails",
+        "title": "Regenerate Thumbnails",
+        "icon": "$(device-camera)"
+      },
+      {
+        "command": "yanglabPdk.insertComponent",
+        "title": "Insert Component Code"
+      },
+      {
+        "command": "yanglabPdk.openSource",
+        "title": "Open Component Source"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "yanglabPdk.search",
+          "when": "view == yanglabPdk.components",
+          "group": "navigation@1"
+        },
+        {
+          "command": "yanglabPdk.clearSearch",
+          "when": "view == yanglabPdk.components",
+          "group": "navigation@2"
+        },
+        {
+          "command": "yanglabPdk.refreshCatalog",
+          "when": "view == yanglabPdk.components",
+          "group": "navigation@3"
+        },
+        {
+          "command": "yanglabPdk.regenerateThumbnails",
+          "when": "view == yanglabPdk.components",
+          "group": "navigation@4"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "yanglabPdk.insertComponent",
+          "when": "view == yanglabPdk.components && viewItem == yanglabComponent",
+          "group": "inline"
+        },
+        {
+          "command": "yanglabPdk.openSource",
+          "when": "view == yanglabPdk.components && viewItem == yanglabComponent",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "YanglabPDK Explorer",
+      "properties": {
+        "yanglabPDK.pythonPath": {
+          "type": "string",
+          "default": "",
+          "description": "Python executable used to refresh the catalog and generate thumbnails. Empty follows the active Python extension environment when available."
+        },
+        "yanglabPDK.packageRoot": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the YanglabPDK package root. Empty enables automatic workspace discovery."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "check": "node --check extension.js",
+    "prepare-resources": "node build-resources.js",
+    "package": "node build-resources.js && vsce package --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.2"
+  },
+  "files": [
+    "extension.js",
+    "media/**",
+    "resources/**",
+    "README.md",
+    "LICENSE"
+  ]
+}
